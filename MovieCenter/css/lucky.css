@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f5f7;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    color: #333;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(135deg, #2c2c2c, #1c1c1c);
+    color: #fff;
+    padding: 0 30px;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 18px;
+    margin: 0;
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.header li {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.header li:hover,
+.header li.active {
+    opacity: 1;
+}
+
+.header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* SEARCH */
+.search {
+    margin-bottom: 30px;
+}
+
+.search input {
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+.search input:focus {
+    border-color: #680f0f;
+    box-shadow: 0 0 0 3px rgba(104, 15, 15, 0.15);
+}
+
+/* MOVIE LIST */
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 25px;
+}
+
+/* MOVIE CARD */
+.movie {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.movie:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+}
+
+.poster {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+/* MOVIE INFO */
+.movie-info {
+    padding: 12px;
+    text-align: center;
+}
+
+.movie-info h3 {
+    font-size: 14px;
+    margin: 6px 0;
+}
+
+.rating {
+    font-size: 13px;
+}
