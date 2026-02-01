@@ -1,5 +1,10 @@
 body{
-    font-family: "Montserrat"
+    font-family: "Montserrat";
+    color: #555555
+}
+
+h1, h3 {
+    color: #222222
 }
 
 .container {
@@ -26,4 +31,65 @@ body{
     outline: none;
     border-radius: 5px;
     border: 1px solid #999999;
+}
+
+.btn {
+    font-size: 14px;
+    height: 30px;
+    min-width: 120px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #cdcdcd;
+    background-color: #ababab;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border: 1px solid #ababab;
+    background-color: #cdcdcd;
+}
+
+.btn.primary{
+    border: 1px solid #bacdf7;
+    background-color: #647fd8;
+}
+
+.btn.primary:hover{
+    border: 1px solid #647fd8;
+    background-color: #bacdf7;
+}
+
+.btn.secondary{
+    border: 1px solid #f1cdb0;
+    background-color: #f89626;
+}
+
+.btn.secondary:hover{
+    border: 1px solid #f89626;
+    background-color: #f1cdb0;
+}
+
+.btn.table-button {
+    min-width: 40px;
+}
+
+.btn.alert-button{
+    border: 1px solid #f57f7f;
+    background-color: #e92f4e;
+    color: #ffffff;
+}
+
+.btn.alert-button:hover{
+    border: 1px solid #e92f4e;
+    background-color: #f57f7f;
+    color: #ffffff;
+}
+
+table {
+    width: 100%;
+}
+
+table th {
+    text-align: left;
 }

@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/main.js"></script>
 </head>
 
 <body>
@@ -14,20 +15,31 @@
         <div class="operation">
             <h3>Müşteri Bilgileri</h3>
             <div class="form-item">
-                <label>Adı</label>
-                <input class="txt"></input>
+                <label for="txtFirstName">Adı</label>
+                <input id="txtFirstName" class="txt" autocomplete="off"></input>
             </div>
             <div class="form-item">
-                <label>Soyadı</label>
-                <input class="txt"></input>
+                <label for="txtLastName">Soyadı</label>
+                <input id="txtLastName" class="txt" autocomplete="off"></input>
             </div>
             <div class="form-item">
-                <label>Yaşı</label>
-                <input class="txt"></input>
+                <label for="txtAge">Yaşı</label>
+                <input id="txtAge" type="number" min="18" max="90" class="txt" autocomplete="off"></input>
             </div>
+            <hr/>
+            <button class="btn primary" onclick="addCustomer()">Kaydet</button>
+            <button class="btn secondary" onclick="clearForm()">Temizle</button>
         </div>
         <div class="operation">
             <h3>Kayıt Listesi</h3>
+            <table id="tblCustomers">
+                <tr>
+                    <th>Adı</th>
+                    <th>Soyadı</th>
+                    <th>Yaşı</th>
+                    <th></th>
+                </tr>
+            </table>
         </div>
     </div>
 </body>

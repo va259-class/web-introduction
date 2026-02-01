@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restoran Randevusu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./css/reservation.css" />
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Rezervasyon Sistemine Hoşgeldiniz!</h1>
+        <p class="subtitle">Lütfen müşteri bilgilerini girin ve rezervasyonları yönetin.</p>
+    </header>
+
+    <main class="container">
+        <!-- Müşteri Bilgileri Formu -->
+        <section class="operation">
+            <h3>Müşteri Bilgileri</h3>
+            <form id="customerForm">
+                <div class="form-item">
+                    <label for="txtFirstName">Adı</label>
+                    <input id="txtFirstName" class="txt" autocomplete="off" required />
+                </div>
+                <div class="form-item">
+                    <label for="txtLastName">Soyadı</label>
+                    <input id="txtLastName" class="txt" autocomplete="off" required />
+                </div>
+                <div class="form-item">
+                    <label for="txtAge">Yaşı</label>
+                    <input id="txtAge" type="number" min="18" max="90" class="txt" autocomplete="off" required />
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn primary" onclick="addCustomer()">Kaydet</button>
+                    <button type="button" class="btn secondary" onclick="clearForm()">Temizle</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Kayıt Listesi -->
+        <section class="operation">
+            <h3>Kayıt Listesi</h3>
+            <div class="table-wrapper">
+                <table id="tblCustomers">
+                    <thead>
+                        <tr>
+                            <th>Adı</th>
+                            <th>Soyadı</th>
+                            <th>Yaşı</th>
+                            <th>İşlem</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Kayıtlar buraya JS ile eklenecek -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Restoran Randevusu</p>
+    </footer>
+</body>
+
+</html>
