@@ -1,0 +1,29 @@
+body{
+    font-family: "Montserrat"
+}
+
+.container {
+    display: flex;
+}
+
+.container .operation {
+    flex: 1;
+    padding: 10px;
+}
+
+.form-item {
+    margin-bottom: 10px;
+}
+
+.form-item label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-item .txt {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #999999;
+}
