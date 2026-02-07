@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Company>
+
+<h3>Firmalar</h3>
+<p>Bu sayfada hizmet alabileceğiniz firmaları görüntüleyebilirsiniz.</p>
+
+<h4>Şu anda sayfamızda @Model.Count() adet firma hizmete hazır.</h4>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Firma Adı</th>
+            <th>İrtibat Numarası</th>
+            <th>Ülkesi</th>
+            <th>Hizmet Yılı</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var company in Model)
+        {
+            <tr>
+                <td>@company.Name</td>
+                <td>@company.Contact</td>
+                <td>
+                    <div class="d-flex">
+                        <div>
+                            <img class="flag" src="/images/flags/@(company.FlagCode).svg" />
+                        </div>
+                        <span>@company.Country</span>
+                    </div>
+                </td>
+                <td>@(DateTime.Now.Year - company.FoundedAt)</td>
+            </tr>
+        }
+    </tbody>
+</table>
