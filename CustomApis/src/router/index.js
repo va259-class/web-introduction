@@ -10,9 +10,9 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('../views/About.vue'),
+      path: '/bitcoin-history',
+      name: 'bitcoin-history',
+      component: () => import('../views/BitcoinHistory.vue'),
     },
     {
       path: '/contact',
@@ -20,9 +20,9 @@ const router = createRouter({
       component: () => import('../views/Contact.vue'),
     },
     {
-      path: '/services',
-      name: 'services',
-      component: () => import('../views/Services.vue'),
+      path: '/countries',
+      name: 'countries',
+      component: () => import('../views/Countries.vue'),
     },
   ],
 })
