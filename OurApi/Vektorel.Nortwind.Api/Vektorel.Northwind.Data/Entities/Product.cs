@@ -1,5 +1,8 @@
-﻿namespace Vektorel.Northwind.Data.Entities;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
+namespace Vektorel.Northwind.Data.Entities;
+
+[Table("Products")]
 public class Product
 {
     public int ProductID { get; set; }
