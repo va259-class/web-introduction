@@ -11,6 +11,13 @@ public class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
         builder.Services.AddNorthwind();
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy("all", policy =>
+            {
+                policy.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod();
+            });
+        });
         //1000 satýr
 
         var app = builder.Build();
@@ -22,6 +29,7 @@ public class Program
         }
 
         //Middleware : Ýstek sürecinde sýrasýyla iþlenen adýmlar
+        app.UseCors("all");
         app.UseHttpsRedirection();
         app.UseAuthorization();
         app.MapControllers();

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Categories</title>
+</head>
+<body>
+
+  <h3>
+    Kategoriler <span id="category-count">(0)</span>
+  </h3>
+
+  <ul id="category-list"></ul>
+
+  <button id="add-btn">Ekle</button>
+
+  <script>
+    // State
+    const categories = [];
+
+    // DOM Elements
+    const categoryList = document.getElementById("category-list");
+    const categoryCount = document.getElementById("category-count");
+    const addBtn = document.getElementById("add-btn");
+
+    // Render function (Vue'daki computed + template yerine)
+    function render() {
+      // Listeyi temizle
+      categoryList.innerHTML = "";
+
+      // Kategorileri ekrana bas
+      categories.forEach(c => {
+        const li = document.createElement("li");
+        li.textContent = c.name;
+        categoryList.appendChild(li);
+      });
+
+      // Sayıyı güncelle
+      categoryCount.textContent = `(${categories.length})`;
+    }
+
+    // Add category (Vue method karşılığı)
+    function addCategory() {
+      const tick = new Date().getTime();
+      categories.push({
+        id: tick,
+        name: "Category " + tick
+      });
+
+      render();
+    }
+
+    // Event listener
+    addBtn.addEventListener("click", addCategory);
+
+    // İlk render
+    render();
+  </script>
+
+</body>
+</html>

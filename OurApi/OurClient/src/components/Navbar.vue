@@ -7,6 +7,7 @@
     <ul :class="{ open: isOpen }">
       <li><router-link to="/">Ana Sayfa</router-link></li>
       <li><router-link to="/products">Ürünler</router-link></li>
+      <li><router-link to="/categories">Kategoriler</router-link></li>
     </ul>
   </nav>
 </template>
